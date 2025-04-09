@@ -74,37 +74,43 @@
         }
 
         .container {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            /* Responsive columns */
+            gap: 15px;
+            /* Space between grid items */
             margin: 20px auto;
-            max-width: 1200px;
-            /* Set a max-width for the container */
-            gap: 10px;
-            /* Add space between sections */
+            max-width: 1500px;
+            /* Optional: Limit the container width */
         }
 
         .left-section,
-        .right-section {
-            width: 48%;
+        .right-section,
+        .center-section {
             text-align: left;
             padding: 10px;
             background-color: #91bbff40;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            /* Smooth transition for hover effect */
         }
 
         .left-section:hover,
-        .right-section:hover {
-            transform: scale(1.02);
-            /* Slightly enlarge the section */
+        .right-section:hover,
+        .center-section:hover {
+            transform: scale(1.10);
+            /* Scale up the section on hover */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            /* Add a shadow effect */
+            /* Add a shadow effect on hover */
+            background-color: #0242a895; /* Make the background color solid */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Smooth transition for hover effect */
+            
         }
 
         .left-section img,
-        .right-section img {
+        .right-section img,
+        .center-section img {
             display: block;
             margin: 0 auto 10px;
             border-radius: 10px;
@@ -113,6 +119,7 @@
 </head>
 
 <!-- <body> -->
+
 <body>
     <h1>Filipino Foods</h1>
     <p>Here are some popular Filipino foods:</p>
@@ -128,7 +135,7 @@
             <p>Adobo is a popular Filipino dish made with meat, usually chicken or pork, marinated in vinegar, soy
                 sauce, garlic, and spices.</p>
         </div>
-        <div class="right-section">
+        <div class="center-section">
             <a href="HTMS.html">
                 <img src="https://www.maggi.ph/sites/default/files/srh_recipes/442ce059c4c490e1ab61cdaef9c98511.jpg"
                     alt="Sinigang">
@@ -137,11 +144,7 @@
             <p>Sinigang is a sour soup made with tamarind, tomatoes, and various vegetables. It is often cooked with
                 pork or shrimp.</p>
         </div>
-    </div>
-
-    <!-- Lumpia -->
-    <div class="container">
-        <div class="left-section">
+        <div class="right-section">
             <a href="HTML.html">
                 <img src="https://omnivorescookbook.com/wp-content/uploads/2020/12/201113_Lumpia-Shanghai_550.jpg"
                     alt="Lumpia">
@@ -150,7 +153,7 @@
             <p>Lumpia is a type of spring roll filled with meat and vegetables. It is usually deep-fried and served with
                 a dipping sauce.</p>
         </div>
-        <div class="right-section">
+        <div class="left-section">
             <a href="HTMP.html">
                 <img src="https://images.yummy.ph/yummy/uploads/2010/03/easy-pancit-bihon.jpg" alt="Pancit">
                 <h2>Pancit</h2>
@@ -158,11 +161,7 @@
             <p>Pancit Bihon is a stir-fried noodle dish made with rice noodles, vegetables, and meat. It is often served
                 during celebrations.</p>
         </div>
-    </div>
-
-    <!-- Lechon -->
-    <div class="container">
-        <div class="left-section">
+        <div class="center-section">
             <a href="HTMLN.html">
                 <img src="https://www.thefooddictator.com/wp-content/uploads/2019/01/cebulechon.jpg" alt="Lechon">
                 <h2>Lechon</h2>
